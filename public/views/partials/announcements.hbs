@@ -1,0 +1,31 @@
+<section class="page-section" id="announcements">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4  d-flex align-items-center text-left">
+                <div>
+                    <h2 class="text-responsive">
+                        Announcements
+                    </h2>
+                    <h3 class="section-subheading text-muted"> All posted announcements will show up here</h3>
+                </div>
+            </div>
+            
+            <div class="col-md-8">
+                <div class="overflow-auto bg-light p-3 pl-5" style="height: 300px; border-radius: 20px;">
+                    {{#each aData}}
+                        <div>
+                            <h2>{{this.title}}</h2>
+                            <p>{{this.message}}</p>
+                            <a href="{{this.link}}" target="'_blank">{{this.linkmessage}}</a>
+                            <div class="row text-right"><p class="fst-italic fw-lighter text-right">Posted: {{this.date}}</p></div>
+                        </div>
+                        </br>
+                    {{/each}}
+
+                </div>   
+            </div>
+            
+        </div>
+    </div>
+
+</section>

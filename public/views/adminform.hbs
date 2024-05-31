@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {{> head}}
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <div class="p-2"><h2>Admin Form</h2></div>
+        
+        <form action="/adminresponse">
+            <div class="form-group p-4">
+                <label for="password">Admin Password</label>
+                <input type="password" class="form-control" name="password" id="password" placeholder="Enter Admin Password">
+                <small id="linkHelp1" class="form-text text-muted">Changes will only be put in effect if password is correct
+                </small>
+            </div>
+            <div class="form-group p-4">
+                <label for="announcment">Add a New Announcement</label>
+                <br>
+                <small id="linkHelp1" class="form-text text-muted">If title field is left blank no new announcment will be
+                    added</small>
+                <input class="form-control" name="title" id="aTitle" placeholder="Title"><br>
+                <textarea class="form-control" name="msg" id="aMessage" placeholder="Message" rows="3"></textarea>
+                <br><br>
+                <label for="announcment">Adding a Linked Message</label>
+                <input class="form-control" name="link" id="aLink" placeholder="Link to important website">
+                <small id="linkHelp1" class="form-text text-muted">If you want you may add a linked message to your
+                    announcements</small><br>
+                <input class="form-control" name="linkmsg" id="aLinkMessage" placeholder="Link Placeholder">
+                <small id="linkHelp1" class="form-text text-muted">This will be the text hyperlinked in the announcement.
+                    (This field can be left blank if you want the hyperlinked message to be the link itself) </small><br>
+            </div>
+            <div class="p-4">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" name="clear" id="clear">
+                    <label class="form-check-label" for="exampleCheck1">Do you want to clear old messages?</label>
+                </div>
+            </div>
+            <div class="p-4">
+                <button type="submit" id="submitButton2" class="btn btn-primary">Submit</button><br><br>
+            </div>
+            
+        </form>
+        <div class="p-4">
+            <form action="/">
+                <input type="submit" class="btn btn-secondary" value="Return to Home Page" />
+            </form>
+        </div>
+        
+
+        
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="/js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
