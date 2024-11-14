@@ -16,10 +16,7 @@ let transporter = nodemailer.createTransport({
     },
 });
 
-
-
 var app = express();
-
 
 app.use(express.static('public/static_files'))
 
@@ -27,9 +24,9 @@ var announcementsdata = path.join('public','data','announcementdata.json')
 
 
 var hbs = require('hbs')
-hbs.registerPartials(__dirname + '/views/partials', function (err) {});
+hbs.registerPartials(__dirname + '/public/views/partials', function (err) {});
 app.set('view engine', 'hbs')
-app.set('views', path.join(__dirname, '/views'));
+app.set('views', path.join(__dirname, '/public/views'));
 
 // const routePage = require('./routes/route.js')
 // app.use(routePage)
